@@ -3,10 +3,11 @@ function InsertHeader()
 
     local projectName = vim.fn.input("Enter a new project name: ")
     local projectDescription = vim.fn.input("Enter a new project description: ")
+    local year = vim.fn.system('date +%Y')
     vim.cmd("1")
     local header = {
         [[/*]],
-        [[** EPITECH PROJECT, 2023]],
+        [[** EPITECH PROJECT, ]] .. year:sub(1, -2) .. "",
         [[** ]],
         [[** File description:]],
         [[** ]],
