@@ -11,7 +11,24 @@ A very simple neovim plugin for generating headers, according to the template
 */
 ```
 
+### Installation:
+**lazy.nvim**
+```lua
+{
+    "ProudFaceOfSUiR/epitech.nvim",
+    lazy = false,
+    config = function ()
+        require("epitech-header")
+    end
+}
+```
+
+### Usage:
+The only available command for you is `:InsertHeader`. It will ask you to type the name and description of your project and then inject the header in the beginning of your file. You can also set a keymap for it:
+```lua
+vim.keymap.set("n", "<leader>ih", ":InsertHeader<CR>")
+```
+
 ### TODO:
-- add automatic year generation
 - add ability to create Makefile headers
 - may be something else, not sure
