@@ -24,10 +24,11 @@ A very simple neovim plugin for generating headers, according to the template
 ```
 
 ### Usage:
-The only available command for you is `:InsertHeader`. It will ask you to type the name and description of your project and then inject the header in the beginning of your file. You can also set a keymap for it:
+First available command for you is `:InsertHeader`. It will ask you to type the name and description of your project and then inject the header in the beginning of your file. You can also set a keymap for it:
 ```lua
 vim.keymap.set("n", "<leader>ih", ":InsertHeader<CR>")
 ```
+The over command is `:CreateTest`. It will create a file in directory `tests` called `test_<filename>` add import of criterion headers and generate epitech template header.
 
 ### TODO:
 - add ability to create Makefile headers
